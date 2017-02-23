@@ -1,0 +1,61 @@
+<div class="card-header">
+    <h4 class="card-title">
+        Manage Commands
+    </h4>
+</div>
+<div class="card-body">
+    <div class="card-block">
+        <div class="form-group">
+            <button class="btn btn-blue-grey" ui-sref="commands_new">
+                <i class="icon-plus3"></i>
+                New Command
+            </button>
+            <div class="clear"></div>
+            <label for="">
+                Search:
+                <input type="text" name="search" class="form-control" ng-model="searchText.questions" />
+            </label>
+        </div>
+
+        <table class="table table-striped table-bordered zero-configuration">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Is Complex?
+                    </th>
+                    <th>
+                        Module Name
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="command in commands | filter:searchText:strict">
+                    <td>
+                        {{command.questions[0] | uppercase}}
+                    </td>
+                    <td>
+                        {{command.isComplex}}
+                    </td>
+                    <td>
+                        {{command.module}}
+                    </td>
+                    <td>
+                        <button class="btn btn-blue-grey .btn-icon.btn-square" ui-sref="commands_update({id:command._id})">
+                            <i class="icon-edit2"></i>
+                        </button>
+                        <button class="btn btn-danger .btn-icon.btn-square" ng-click="delete(command)">
+                            <i class="icon-trash-o"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

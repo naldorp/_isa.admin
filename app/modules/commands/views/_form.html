@@ -1,0 +1,32 @@
+<div class="modal-body">
+    <label>Questions: </label>
+    <div class="form-group position-relative" >
+        <isa-tagmanager tags="command.questions" placeholder="add questions"></isa-tagmanager>
+    </div>
+
+    <label>Answers: </label>
+    <div class="form-group position-relative">
+        <isa-tagmanager tags="command.answers" placeholder="add answers"></isa-tagmanager>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Module Name: </label>
+                <div class="form-group position-relative">
+                    <input type="text" placeholder="ModuleName" class="form-control" ng-model="command.module">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Is Complex?</label>
+                <div class="form-group position-relative">
+                    <input type="checkbox" id="switcheryColor4" class="switchery" data-color="success" ng-model="command.isComplex" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

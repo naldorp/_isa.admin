@@ -1,0 +1,19 @@
+{
+  "name": "isa.admin",
+  "version": "0.0.1",
+  "description": "This is the admin project used to control ISA, the personal assistant",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francinaldo Portela",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.2.1"
+  }
+}

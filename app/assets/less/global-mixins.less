@@ -1,0 +1,11 @@
+//mixins
+.border-with-opacity(@opacity) {
+    border: 1px solid rgba(0, 0, 0, @opacity);
+}
+
+.font-size(@value) {
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    font-size:~"@{pxValue}px";
+    font-size:~"@{remValue}rem";
+}

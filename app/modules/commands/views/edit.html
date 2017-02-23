@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title">
+            Edit Command
+        </h4>
+    </div>
+    <div class="card-body">
+        <div class="card-block">
+            <form name="commandForm">
+                <div ng-include="'/modules/commands/views/_form.html'">
+                </div>
+                <div class="modal-footer">
+                    <input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="cancel" ui-sref="commands_all">
+                    <input ng-click="save()" class="btn btn-primary btn-lg" value="save">
+                </div>
+
+            </form>
+
+        </div>
+    </div>

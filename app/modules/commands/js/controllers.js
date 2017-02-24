@@ -1,8 +1,15 @@
 var app = angular.module('isaAdmin.commands.controllers', [])
 
-app.controller('CommandsController', function($scope, $location, $state, $window, Command) {
+app.controller('CommandsController', function($scope, $state, $window, Command) {
+    //pagination data
+    $scope.currentPage = 1;
+    $scope.pageSize = 10;
+
+    //load data
     $scope.commands = Command.query();
 
+    //# ACTIONS
+    //delete
     $scope.delete = function(command) {
         if ($window.confirm('Are you sure?')) {
             command.$delete(function() {
@@ -25,11 +32,11 @@ app.controller('CommandCreateController', ['$scope', '$state', 'Command', functi
             $state.go('commands_all');
         });
     }
-    
+
     $scope.$broadcast('dataLoaded');
 }]);
 
-app.controller('CommandUpdateController', ['$scope', '$state', '$stateParams','$timeout','Command', function($scope, $state, $stateParams, $timeout, Command) {
+app.controller('CommandUpdateController', ['$scope', '$state', '$stateParams', '$timeout', 'Command', function($scope, $state, $stateParams, $timeout, Command) {
     $scope.command = Command.get({
         id: $stateParams.id
     });
@@ -40,7 +47,7 @@ app.controller('CommandUpdateController', ['$scope', '$state', '$stateParams','$
         });
     }
 
-   
+
     //refresh tag input data
     //$('input[data-role=tagsinput]').tagsinput('refresh');
 }]);

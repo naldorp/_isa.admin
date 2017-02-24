@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('isaAdmin', ['commandsModule', 'ui.router', 'ngResource', 'stateFiles', 'bootstrap-tagsinput']);
+angular.module('isaAdmin', ['commandsModule','dashboardModule', 'ui.router', 'ngResource', 'stateFiles', 'bootstrap-tagsinput','angularUtils.directives.dirPagination']);

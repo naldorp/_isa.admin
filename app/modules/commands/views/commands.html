@@ -35,7 +35,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="command in commands | filter:searchText:strict">
+                <tr dir-paginate="command in commands | filter:searchText:strict | itemsPerPage: pageSize" current-page="currentPage">
                     <td>
                         {{command.questions[0] | uppercase}}
                     </td>
@@ -56,6 +56,7 @@
                 </tr>
             </tbody>
         </table>
-
+        <dir-pagination-controls boundary-links="true" template-url="/assets/tpl/dirPagination.tpl.html"></dir-pagination-controls>
+       
     </div>
 </div>

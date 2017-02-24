@@ -18,6 +18,8 @@
     
     <link rel="stylesheet" type="text/css" href="http://demo.pixinvent.com/robust-admin/ltr/vertical-content-menu-template/robust-assets/css/plugins/forms/tags/bootstrap-tagsinput.css">
     <link rel="stylesheet" type="text/css" href="http://demo.pixinvent.com/robust-admin/ltr/vertical-content-menu-template/robust-assets/css/plugins/forms/tags/tagging.css">
+    
+    <link rel="stylesheet" type="text/css" href="http://demo.pixinvent.com/robust-admin/ltr/vertical-content-menu-template/robust-assets/css/plugins/pagination/bootstrap-datepaginator.min.css">
 
 </head>
 
@@ -85,7 +87,7 @@
                 <div class="main-menu-content">
                     <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
                         <li class=" nav-item">
-                            <a href="index.html">
+                            <a ui-sref="dashboard_index">
                                 <i class="icon-home3"></i><span data-i18n="nav.dash.main" class="menu-title">Dashboard</span></a>
                         </li>
                         <li class=" nav-item">
@@ -132,8 +134,13 @@
     <script type="text/javascript" src="/modules/commands/js/controllers.js"></script>
     <script type="text/javascript" src="/modules/commands/js/directives.js"></script>
     <script type="text/javascript" src="/modules/commands/js/services.js"></script>
+    <script type="text/javascript" src="/modules/dashboard/dashboardModule.js"></script>
+    <script type="text/javascript" src="/modules/dashboard/js/controllers.js"></script>
     
     <script src="/assets/js/theme/plugins/forms/tags/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="/assets/js/dirPagination.js"></script>
+    
 </body>
 
 </html>
